@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="">
+    <main className="pt-40">
       <h1>Hello WOrld</h1>
 
       <p>
