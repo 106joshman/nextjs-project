@@ -1,3 +1,4 @@
+import Results from "@/components/Results/Results";
 import axios from "axios";
 
 const API_KEY = process.env.API_KEY;
@@ -15,13 +16,9 @@ export default async function Home({ searchParams }) {
   // console.log(showData);
 
   return (
-    <main className="pt-10">
+    <main className="">
       <div className="">
-        {showData.map((items, index) => (
-          <div className="" key={index}>
-            {items.original_title}
-          </div>
-        ))}
+        <Results showData={showData} />
       </div>
     </main>
   );

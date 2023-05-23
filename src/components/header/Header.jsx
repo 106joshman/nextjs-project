@@ -8,7 +8,7 @@ import NavBar from "../NavBar/NavBar";
 const Header = () => {
   return (
     <>
-      <header className="flex justifycenter items-center py-4 px-4 md:px-6 fixed bg-neutral-400 shadow-md w-full ">
+      <header className="flex justifycenter items-center py-4 px-4 md:px-6 bg-neutral-400 shadow-md w-full ">
         <nav className="container max-w-6xl mx-auto flex items-center select-none justify-between">
           <div className="flex items-center">
             <div className="left flex items-center bgblack rounded-lg font-bold">
