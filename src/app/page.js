@@ -16,10 +16,8 @@ export default async function Home({ searchParams }) {
   // console.log(showData);
 
   return (
-    <main className="">
-      <div className="">
-        <Results showData={showData} />
-      </div>
-    </main>
+    <div className="">
+      <Results showData={showData} />
+    </div>
   );
 }

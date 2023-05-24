@@ -8,16 +8,14 @@ export default function Card({ data }) {
       <Link href={`/movie/${data.id}`}>
         <img
           src={`https://image.tmdb.org/t/p/original/${
-            data.backdrop_path || result.poster_path
+            data.backdrop_path || data.poster_path
           }`}
           width={500}
           height={300}
           className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200"
-          alt=""
+          alt="image is not available"
           placeholder="blur"
-          //   onBlur={}
-          // onLoad={}
-          srcset=""
+          style={{ maxWidth: "100%", height: "auto" }}
         />
         <div className="p-2">
           <p className="line-clamp-2 text-md">{data.overview}</p>
@@ -26,7 +24,8 @@ export default function Card({ data }) {
           </h2>
           <p className="flex items-center">
             {data.release_date || data.first_air_date}
-            <FiThumbsUp className="h-5 mr-1 ml-3" />{data.vote_count}
+            <FiThumbsUp className="h-5 mr-1 ml-3" />
+            {data.vote_count}
           </p>
         </div>
       </Link>
