@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const getMovie = async (movieId) => {
@@ -16,8 +17,8 @@ export default async function MovePage({ params }) {
 
   return (
     <div className="w-full">
-      <div className="p-4 md:pt-8 flex flex-col md:flex-row items-center content-center max-w-6xl mx-auto md:space-x-6">
-        <img
+      <div className="p-4 md:pt-8 flex flex-col lg:flex-row items-center content-center max-w-6xl mx-auto md:space-y-4 lg:space-x-6">
+        <Image
           src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
           }`}
@@ -26,8 +27,9 @@ export default async function MovePage({ params }) {
           className="rounded-lg"
           alt="Movie poster"
           placeholder="blur"
+          blurDataURL="/Spinners.svg"
           style={{ maxWidth: "100%", height: "100%" }}
-        />
+        ></Image>
         <div className="p-2">
           <h2 className="text-lg mb-3 font-bold">
             {movie.title || movie.name}

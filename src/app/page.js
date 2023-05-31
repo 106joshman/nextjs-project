@@ -13,7 +13,6 @@ export default async function Home({ searchParams }) {
   );
 
   const showData = res.data.results;
-  // console.log(showData);
 
   return (
     <div className="">
