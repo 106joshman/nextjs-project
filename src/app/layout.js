@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <Header />
           {/* <NavBar/> */}
           <SearchBox />
-          <main className="container mx-auto h-[80vh]"> {children}</main>
+          <main className="container mx-auto"> {children}</main>
         </Providers>
       </body>
     </html>
